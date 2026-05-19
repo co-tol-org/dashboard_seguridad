@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>AMAIA - Gobernación del Tolima (Secretaría de Seguridad)</title>
+    <link rel="icon" type="image/png" href="https://storage.googleapis.com/gdt-icons/Amaia%2001.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <link rel="stylesheet" href="style.css?v=1.1">
+    <link rel="stylesheet"
+        href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
+    <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+</head>
+
+<body>
+    <header class="app-header">
+        <div class="branding">
+            <img src="https://storage.googleapis.com/gdt-icons/Gobernaci%C3%B3n%20del%20Tolima%20Icon.png"
+                alt="Escudo Gobernación del Tolima" class="escudo-img">
+            <div class="titles">
+                <span class="main-title">Sistema de información estadístico del Tolima - Secretaría de Seguridad</span>
+                <span class="sub-title">Sistema Inteligente de Consultas de Datos</span>
+            </div>
+        </div>
+
+        <div class="header-info">
+            <div class="system-status">
+                <div class="status-indicator"></div>
+                <span>En Línea</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-layout">
+
+        <section class="dashboard-panel">
+            <div class="dashboard-loader">
+                <div class="spinner"></div>
+                <p style="font-size: 0.9rem; font-weight: 500;">Cargando Dashboard...</p>
+            </div>
+
+            <iframe
+                src="https://datastudio.google.com/embed/reporting/fde8031e-7698-4f70-a8d2-0fd0a8fcb5a0/page/p_xxdlqv970d" frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox">
+            </iframe>
+        </section>
+
+        <aside class="chat-panel">
+            <div class="chat-card">
+
+                <div class="chat-header">
+                    <div class="assistant-profile">
+                        <div class="avatar-circle">
+                            <img src="https://storage.googleapis.com/gdt-icons/Amaia%2001.png" alt="AMAIA Avatar"
+                                width="60" height="60">
+                        </div>
+                        <div class="assistant-details">
+                            <h2>AMAIA</h2>
+                            <span>Asistente Virtual</span>
+                        </div>
+                    </div>
+
+                    <button class="btn-reset" id="btn-reset" title="Reiniciar Conversación">
+                        <i class="ph-bold ph-arrow-counter-clockwise"></i>
+                    </button>
+                </div>
+
+                <div class="messenger-wrapper">
+                    <df-messenger location="us-central1" project-id="tablero-tolima"
+                        agent-id="68914ffe-646b-4a7f-979d-0acafed24934" allow-feedback="all" language-code="es"
+                        max-query-length="-1" expand="true" intent="Hola">
+                        <df-messenger-chat chat-title="AMAIA" bot-writing-text="Escribiendo..."
+                            placeholder-text="Tu consulta...">
+                        </df-messenger-chat>
+                    </df-messenger>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <script src="main.js?v=1.1"></script>
+</body>
+
+</html>
