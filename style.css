@@ -363,13 +363,13 @@ df-messenger {
     --df-messenger-header-height: 0;
     --df-messenger-titlebar-height: 0;
     /* Colores del Chat */
-    --df-messenger-chat-background: var(--tolima-primary);
+    --df-messenger-chat-background: #ffffff);
 
     /* Mensajes */
     --df-messenger-message-user-background: #4DB8C2;
     /* TU MENSAJE (Vinotinto) */
     --df-messenger-message-user-font-color: #ffffff;
-    --df-messenger-message-bot-background: #E0F7F9;
+    --df-messenger-message-bot-background: var(--tolima-accent-light);
     --df-messenger-message-bot-font-color: #2D6E75;
 
     /* Área de Input (Parte inferior) */
