@@ -350,8 +350,11 @@ df-messenger {
 
     --df-messenger-font-color: var(--text-primary);
     --df-messenger-font-family: 'Inter', sans-serif;
-    --df-messenger-titlebar-display: none;
     --df-messenger-header-height: 0;
+   --df-messenger-titlebar-display: none !important;
+    --df-messenger-titlebar-height: 0 !important;
+    --df-messenger-titlebar-padding: 0 !important;
+    --df-messenger-titlebar-title-font-size: 0px !important;
     
     /* 1. FONDO TOTALMENTE BLANCO (Adiós al gris/azul de fondo) */
     --df-messenger-chat-background: #ffffff !important;
