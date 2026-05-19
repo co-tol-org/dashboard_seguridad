@@ -342,51 +342,39 @@ html {
 }
 
 /* Personalización de variables DF-Messenger */
+/* Personalización de variables de Dialogflow Messenger */
 df-messenger {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: 0; left: 0; width: 100%; height: 100%;
     z-index: 10;
 
     --df-messenger-font-color: var(--text-primary);
     --df-messenger-font-family: 'Inter', sans-serif;
-
-    /* Ocultamos el header por defecto */
-    --df-messenger-titlebar-background: transparent;
-    --df-messenger-titlebar-padding: 0px;
-    --df-messenger-titlebar-title-font-size: 0px;
-    --df-messenger-titlebar-icon-display: none;
-    /* Forzar ocultamiento del header por defecto */
     --df-messenger-titlebar-display: none;
     --df-messenger-header-height: 0;
-    --df-messenger-titlebar-height: 0;
-    /* Colores del Chat */
-    --df-messenger-chat-background: #ffffff);
+    
+    /* 1. FONDO TOTALMENTE BLANCO (Adiós al gris/azul de fondo) */
+    --df-messenger-chat-background: #ffffff !important;
+    --df-messenger-chat-window-background: #ffffff !important;
 
-    /* Mensajes */
-    --df-messenger-message-user-background: #4DB8C2;
-    /* TU MENSAJE (Vinotinto) */
+    /* 2. BURBUJA DE TUS MENSAJES (Amarillo Corporativo en vez de turquesa) */
+    --df-messenger-message-user-background: var(--tolima-primary); 
     --df-messenger-message-user-font-color: #ffffff;
-    --df-messenger-message-bot-background: var(--tolima-accent-light);
-    --df-messenger-message-bot-font-color: #2D6E75;
+    
+    /* 3. BURBUJA DE AMAIA Y SUS LETRAS (Fondo Crema Cálido con Letras color Café Oscuro) */
+    --df-messenger-message-bot-background: var(--tolima-accent-light); 
+    --df-messenger-message-bot-font-color: var(--tolima-bot-text); 
 
-    /* Área de Input (Parte inferior) */
-    --df-messenger-input-background: var(--tolima-primary-pale);
+    /* Área de Input (Donde escribes, totalmente blanco) */
+    --df-messenger-input-background: #ffffff; 
     --df-messenger-input-box-background: #ffffff;
     --df-messenger-input-font-color: var(--text-primary);
 
-    /* ICONOS Y BORDES (VINOTINTO) */
-    --df-messenger-send-icon: #4DB8C2;
-    /* Icono enviar */
-    --df-messenger-input-box-border: 1px solid var(--border-color);
-    /* Borde reposo */
-    --df-messenger-input-box-focus-border: 2px solid #4DB8C2;
-    /* Borde al escribir */
-
-    --df-messenger-input-border-top: 1px solid rgba(11, 37, 69, 0.1);
-    --df-messenger-send-icon-color: var(--tolima-primary);
+    /* Iconos y Bordes */
+    --df-messenger-send-icon: var(--tolima-primary-dark); 
+    --df-messenger-input-box-border: 1px solid var(--border-color); 
+    --df-messenger-input-box-focus-border: 2px solid var(--tolima-accent); 
+    --df-messenger-input-border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 /* =========================================
