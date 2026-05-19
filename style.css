@@ -1,45 +1,37 @@
 
-/* 
-   Variables CSS
+/* Variables CSS
    Definimos los colores corporativos y variables reutilizables 
    para facilitar el mantenimiento del tema.
 */
 :root {
+    --tolima-primary: #F2C94C; /* Amarillo Principal Institucional */
+    --tolima-primary-dark: #D4AB27; /* Amarillo oscuro (Para textos o bordes fuertes) */
+    
+    --tolima-accent: #F2C94C; /* Amarillo de acento */
+    --tolima-accent-light: #FEF9E7; /* Amarillo muy clarito para el fondo de los mensajes del bot */
+    
+    --tolima-primary-pale: #FFFCF2; /* Fondo pálido cálido para el área de escritura */
+    
+    --tolima-secondary: #D4AB27; /* Amarillo intermedio para énfasis */
 
-    --tolima-primary: #4DB8C2;
-    /* Azul Navy Oscuro (Fondo escudo/textos oscuros) */
-    --tolima-primary-dark: #3A8E96;
-    /* Azul Noche (Para degradados profundos) */
-
-    --tolima-accent: #4DB8C2;
-    /* Cian Eléctrico (Reemplaza al Dorado/Gold) */
-    --tolima-accent-light: #E0F7F9;
-    /* Cian muy claro para fondos sutiles */
-
-    --tolima-primary-pale: #F0FCFD;
-    /* Azul pálido para fondos secundarios */
-
-    --tolima-secondary: #4DB8C2;
-    /* Azul Rey intermedio (Para botones o énfasis) */
-
-    /* Mapeo a tus variables antiguas para mantener compatibilidad con tu estructura */
+    /* Mapeo a tus variables antiguas para mantener compatibilidad */
     --tolima-vinotinto: var(--tolima-primary);
     --tolima-vinotinto-dark: var(--tolima-primary-dark);
     --tolima-gold: var(--tolima-accent);
     --tolima-gold-light: var(--tolima-accent-light);
-    --tolima-neutral: #F0F7FF;
+    --tolima-neutral: #FEF9E7;
 
     /* Colores UI */
-    --bg-body: #F4F8FB;
+    --bg-body: #F8F9FA;
     --surface: #ffffff;
-    --text-primary: #0B2545;
+    --text-primary: #1A1A1A; /* Un gris muy oscuro, casi negro, para que resalte sobre el amarillo */
     --text-secondary: #475569;
-    --border-color: #CBD5E1;
+    --border-color: #E2E8F0;
 
     /* Sombras y Efectos */
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-    --shadow-md: 0 4px 6px -1px rgba(11, 37, 69, 0.1), 0 2px 4px -1px rgba(11, 37, 69, 0.06);
-    --shadow-header: 0 4px 20px rgba(77, 184, 194, 0.2);
+    --shadow-md: 0 4px 6px -1px rgba(242, 201, 76, 0.15), 0 2px 4px -1px rgba(242, 201, 76, 0.1);
+    --shadow-header: 0 4px 20px rgba(242, 201, 76, 0.15);
 }
 
 * {
