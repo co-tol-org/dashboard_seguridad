@@ -120,7 +120,7 @@ html {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     font-size: 0.75rem;
-    color: #00B8CC;
+    color: var(--tolima-primary-dark); ;
     text-transform: uppercase;
     letter-spacing: 0.15em;
     margin-top: 2px;
@@ -261,7 +261,7 @@ html {
 
 /* Encabezado interno del Chat */
 .chat-header {
-    background: #4DB8C2;
+    background: var(--tolima-primary);
     padding: 16px 20px;
     color: white;
     display: flex;
@@ -363,7 +363,7 @@ df-messenger {
     --df-messenger-header-height: 0;
     --df-messenger-titlebar-height: 0;
     /* Colores del Chat */
-    --df-messenger-chat-background: #ffffff;
+    --df-messenger-chat-background: var(--tolima-primary);
 
     /* Mensajes */
     --df-messenger-message-user-background: #4DB8C2;
