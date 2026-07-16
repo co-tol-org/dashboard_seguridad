@@ -89,6 +89,23 @@
         </aside>
     </main>
 
+    <button class="chat-toggle-btn" id="chatToggleBtn">
+        <img src="https://storage.googleapis.com/gdt-icons/Amaia%2001.png" alt="Chat AMAIA">
+    </button>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const toggleBtn = document.getElementById("chatToggleBtn");
+            const chatPanel = document.querySelector(".chat-panel");
+
+            if (toggleBtn && chatPanel) {
+                toggleBtn.addEventListener("click", function() {
+                    chatPanel.classList.toggle("open");
+                });
+            }
+        });
+    </script>
+
     <script src="main.js?v=1.1"></script>
 </body>
 
