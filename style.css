@@ -383,7 +383,12 @@ df-messenger {
 /* =========================================
    4. DISEÑO RESPONSIVO (CORREGIDO)
 ========================================= */
-
+/* =========================================
+   BOTÓN FLOTANTE (Oculto en PC)
+========================================= */
+.chat-toggle-btn {
+    display: none;
+}
 @media (max-width: 1024px) {
 
     /* 1. FORZAR SCROLL (IMPORTANTE) */
@@ -459,11 +464,63 @@ df-messenger {
         border-right: none;
     }
 
-    .chat-panel {
-        height: 600px;
-        /* Altura suficiente para chatear */
+   /* Ajuste del Dashboard para que ocupe toda la pantalla en móvil */
+    .dashboard-panel {
+        height: calc(100vh - 65px) !important;
         width: 100%;
-        padding: 10px;
-        margin-bottom: 50px;
+        margin: 0;
+        border-radius: 0;
+        border: none;
+    }
+
+    /* 1. Muestra el botón flotante en la esquina inferior */
+    .chat-toggle-btn {
+        display: flex;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: #fff;
+        border: 3px solid var(--tolima-accent);
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        z-index: 1000;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        overflow: hidden;
+        transition: transform 0.2s;
+    }
+
+    .chat-toggle-btn:active {
+        transform: scale(0.9);
+    }
+
+    /* 2. Convierte el panel de chat en una ventana emergente oculta */
+    .chat-panel {
+        position: fixed;
+        bottom: 90px;
+        right: 20px;
+        width: calc(100% - 40px);
+        max-width: 380px;
+        height: 500px;
+        padding: 0;
+        margin: 0;
+        z-index: 999;
+        
+        /* Efecto de esconder / mostrar */
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(20px);
+        transition: all 0.3s ease;
+    }
+    
+    /* 3. Clase activa que se enciende con el botón */
+    .chat-panel.open {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
     }
 }
