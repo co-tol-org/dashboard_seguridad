@@ -1,4 +1,3 @@
-
 /* Variables CSS
    Definimos los colores corporativos y variables reutilizables 
    para facilitar el mantenimiento del tema.
@@ -38,11 +37,6 @@
     box-sizing: border-box;
 }
 
-/* 
-   Reset básico y configuración del cuerpo 
-   Usamos Flexbox en dirección columna para permitir 
-   que el header esté arriba y el contenido ocupe el resto.
-*/
 body,
 html {
     margin: 0;
@@ -72,7 +66,6 @@ html {
     border-bottom: 3px solid var(--tolima-accent);
 }
 
-/* Área de Branding (Izquierda) */
 .branding {
     display: flex;
     align-items: center;
@@ -108,25 +101,22 @@ html {
 
 .main-title span {
     color: var(--tolima-secondary);
-    /* Azul más claro para "Resuelve" */
 }
 
 .main-title .highlight {
     color: #005fcc;
-    /* Un tono Cian un poco más oscuro para texto blanco */
 }
 
 .sub-title {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     font-size: 0.75rem;
-    color: var(--tolima-primary-dark); ;
+    color: var(--tolima-primary-dark);
     text-transform: uppercase;
     letter-spacing: 0.15em;
     margin-top: 2px;
 }
 
-/* Área de Estado/Info (Derecha) */
 .header-info {
     display: flex;
     align-items: center;
@@ -156,17 +146,9 @@ html {
 }
 
 @keyframes pulse {
-    0% {
-        box-shadow: 0 0 0 0 rgba(0, 229, 255, 0.4);
-    }
-
-    50% {
-        box-shadow: 0 0 0 6px rgba(0, 229, 255, 0);
-    }
-
-    100% {
-        box-shadow: 0 0 0 0 rgba(0, 229, 255, 0);
-    }
+    0% { box-shadow: 0 0 0 0 rgba(0, 229, 255, 0.4); }
+    50% { box-shadow: 0 0 0 6px rgba(0, 229, 255, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(0, 229, 255, 0); }
 }
 
 /* =========================================
@@ -204,20 +186,15 @@ html {
     z-index: 1;
 }
 
-/* Loader para el iframe */
 .dashboard-loader {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    top: 0; left: 0; right: 0; bottom: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background: #fff;
     z-index: 0;
-    /* Detrás del iframe cuando cargue */
     color: var(--text-secondary);
 }
 
@@ -232,9 +209,7 @@ html {
 }
 
 @keyframes spin {
-    to {
-        transform: rotate(360deg);
-    }
+    to { transform: rotate(360deg); }
 }
 
 /* --- Panel Derecho: Chat AMAIA --- */
@@ -259,7 +234,6 @@ html {
     position: relative;
 }
 
-/* Encabezado interno del Chat */
 .chat-header {
     background: var(--tolima-primary);
     padding: 16px 20px;
@@ -289,7 +263,6 @@ html {
     border: 2px solid var(--tolima-accent);
     box-shadow: 0 0 8px rgba(0, 229, 255, 0.4);
     overflow: hidden;
-    /* Asegura que la imagen no se salga */
 }
 
 .avatar-circle img {
@@ -313,7 +286,6 @@ html {
     color: var(--tolima-accent-light);
 }
 
-/* Botón de Nueva Sesión */
 .btn-reset {
     background: rgba(255, 255, 255, 0.1);
     border: none;
@@ -334,7 +306,6 @@ html {
     transform: rotate(-15deg);
 }
 
-/* Contenedor del componente DF-Messenger */
 .messenger-wrapper {
     flex: 1;
     position: relative;
@@ -342,7 +313,6 @@ html {
 }
 
 /* Personalización de variables DF-Messenger */
-/* Personalización de variables de Dialogflow Messenger */
 df-messenger {
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
@@ -351,29 +321,24 @@ df-messenger {
     --df-messenger-font-color: var(--text-primary);
     --df-messenger-font-family: 'Inter', sans-serif;
     --df-messenger-header-height: 0;
-   --df-messenger-titlebar-display: none !important;
+    --df-messenger-titlebar-display: none !important;
     --df-messenger-titlebar-height: 0 !important;
     --df-messenger-titlebar-padding: 0 !important;
     --df-messenger-titlebar-title-font-size: 0px !important;
     
-    /* 1. FONDO TOTALMENTE BLANCO (Adiós al gris/azul de fondo) */
     --df-messenger-chat-background: #ffffff !important;
     --df-messenger-chat-window-background: #ffffff !important;
 
-    /* 2. BURBUJA DE TUS MENSAJES (Amarillo Corporativo en vez de turquesa) */
     --df-messenger-message-user-background: var(--tolima-primary); 
     --df-messenger-message-user-font-color: #ffffff;
     
-    /* 3. BURBUJA DE AMAIA Y SUS LETRAS (Fondo Crema Cálido con Letras color Café Oscuro) */
     --df-messenger-message-bot-background: var(--tolima-accent-light); 
-    --df-messenger-message-bot-font-color: var(--tolima-bot-text); 
+    --df-messenger-message-bot-font-color: var(--text-primary); 
 
-    /* Área de Input (Donde escribes, totalmente blanco) */
     --df-messenger-input-background: #ffffff; 
     --df-messenger-input-box-background: #ffffff;
     --df-messenger-input-font-color: var(--text-primary);
 
-    /* Iconos y Bordes */
     --df-messenger-send-icon: var(--tolima-primary-dark); 
     --df-messenger-input-box-border: 1px solid var(--border-color); 
     --df-messenger-input-box-focus-border: 2px solid var(--tolima-accent); 
@@ -381,90 +346,60 @@ df-messenger {
 }
 
 /* =========================================
-   4. DISEÑO RESPONSIVO (CORREGIDO)
-========================================= */
-/* =========================================
-   BOTÓN FLOTANTE (Oculto en PC)
+   BOTÓN FLOTANTE (Oculto en PC por defecto)
 ========================================= */
 .chat-toggle-btn {
     display: none;
 }
+
+/* =========================================
+   4. DISEÑO RESPONSIVO (CORREGIDO)
+========================================= */
 @media (max-width: 1024px) {
 
     /* 1. FORZAR SCROLL (IMPORTANTE) */
-    body,
-    html {
+    body, html {
         height: auto !important;
-        /* Deja que la página crezca lo necesario */
         min-height: 100vh;
-        /* Al menos el alto de la pantalla */
         overflow-y: auto !important;
-        /* HABILITA EL DESLIZAMIENTO CON EL DEDO */
         overflow-x: hidden;
-        /* Evita movimiento lateral */
         display: block;
-        /* Quitamos el flex del body que bloqueaba todo */
     }
 
     /* 2. DESBLOQUEAR EL CONTENEDOR PRINCIPAL */
     .main-layout {
         height: auto !important;
-        /* Ya no tiene altura fija */
         overflow: visible !important;
-        /* Deja que el contenido se muestre */
         display: flex;
         flex-direction: column;
-        /* Pone uno debajo del otro */
         padding-bottom: 40px;
-        /* Espacio al final para que no se corte */
     }
 
     /* 3. ARREGLO DEL ENCABEZADO (HEADER) */
     .app-header {
         height: auto;
-        /* Altura flexible */
         padding: 10px 15px;
-        /* Menos relleno */
         flex-wrap: wrap;
-        /* Permite acomodar elementos si no caben */
     }
 
     .branding {
         max-width: 100%;
     }
 
-    /* Ajustamos el logo para que no sea gigante */
     .escudo-img {
         height: 45px;
     }
 
-    /* Texto del título más pequeño y limpio */
     .main-title {
         font-size: 0.85rem;
         line-height: 1.2;
     }
 
-    /* OCULTAMOS ELEMENTOS QUE ESTORBAN EN EL CELULAR */
-    .sub-title,
-    .header-info {
+    .sub-title, .header-info {
         display: none !important;
-        /* Adiós al subtítulo y al estado "En línea" en celular */
     }
 
-    /* 4. PANELES (Dashboard y Chat) */
-    .dashboard-panel {
-        height: 500px;
-        /* Altura fija segura para el gráfico */
-        width: 100%;
-        margin: 0;
-        margin-bottom: 20px;
-        border-radius: 0;
-        /* Quitamos bordes redondos para ganar espacio */
-        border-left: none;
-        border-right: none;
-    }
-
-   /* Ajuste del Dashboard para que ocupe toda la pantalla en móvil */
+    /* 4. AJUSTE DEL DASHBOARD (Toda la pantalla en móvil) */
     .dashboard-panel {
         height: calc(100vh - 65px) !important;
         width: 100%;
@@ -473,7 +408,7 @@ df-messenger {
         border: none;
     }
 
-    /* 1. Muestra el botón flotante en la esquina inferior */
+    /* 5. MUESTRA EL BOTÓN FLOTANTE EN MÓVIL */
     .chat-toggle-btn {
         display: flex;
         position: fixed;
@@ -493,12 +428,18 @@ df-messenger {
         overflow: hidden;
         transition: transform 0.2s;
     }
-
-    .chat-toggle-btn:active {
-        transform: scale(0.9);
+    
+    .chat-toggle-btn img { 
+        width: 100%; 
+        height: 100%; 
+        object-fit: cover; 
+    }
+    
+    .chat-toggle-btn:active { 
+        transform: scale(0.9); 
     }
 
-    /* 2. Convierte el panel de chat en una ventana emergente oculta */
+    /* 6. CONVIERTE EL PANEL DE CHAT EN VENTANA EMERGENTE OCULTA */
     .chat-panel {
         position: fixed;
         bottom: 90px;
@@ -517,7 +458,7 @@ df-messenger {
         transition: all 0.3s ease;
     }
     
-    /* 3. Clase activa que se enciende con el botón */
+    /* 7. CLASE ACTIVA QUE SE ENCIENDE CON EL BOTÓN */
     .chat-panel.open {
         opacity: 1;
         pointer-events: auto;
